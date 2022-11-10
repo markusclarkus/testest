@@ -33,7 +33,7 @@
       }
 
 
-            function get_isShadow(){
+      function get_isShadow(){
         const queryString = window.location.search;
         const URLParams = new URLSearchParams(queryString);
         return URLParams.get('isHideShadow') ? false : true;
@@ -44,7 +44,6 @@
       function main() {
         JEELIZVTOWIDGET.start({
           isShadow: get_isShadow(),
-         
           searchImageMask: 'https://appstatic.jeeliz.com/jeewidget/images/target.png',
           searchImageColor: 0xeeeeee,
           callbackReady: function(){
@@ -93,7 +92,7 @@
       } // end main()
 
 
-      function JEELIZVTOWIDGET.load_modelStandalone('glasses3D/10x246tort (1).json')
+     
         }
       }
 
@@ -106,7 +105,7 @@
 
       <div class='header'>
         <div class="headerTitle">
-          EYECARE LIVE
+          Jeeliz VTO Widget
         </div>      
       </div>
 

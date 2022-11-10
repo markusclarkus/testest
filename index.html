@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>EYECARE LIVE</title>
+    <title>OCHO</title>
     <meta charset='utf-8' />
 
     <!-- Forbid resize on pinch with IOS Safari: -->
@@ -33,17 +33,7 @@
       }
 
 
-      function get_initialSKU(){
-        // look if a SKU is provided as a URL parameters:
-        const queryString = window.location.search;
-        const URLParams = new URLSearchParams(queryString);
-        const sku = URLParams.get('sku') || 'rayban_aviator_or_vertFlash';
-        console.log('Initial SKU =', sku);
-        return sku;
-      }
-
-
-      function get_isShadow(){
+            function get_isShadow(){
         const queryString = window.location.search;
         const URLParams = new URLSearchParams(queryString);
         return URLParams.get('isHideShadow') ? false : true;
@@ -54,7 +44,7 @@
       function main() {
         JEELIZVTOWIDGET.start({
           isShadow: get_isShadow(),
-          sku: get_initialSKU(),
+         
           searchImageMask: 'https://appstatic.jeeliz.com/jeewidget/images/target.png',
           searchImageColor: 0xeeeeee,
           callbackReady: function(){
@@ -103,10 +93,7 @@
       } // end main()
 
 
-      function load_modelBySKU(){
-        const sku = prompt('Please enter a glasses model SKU:', 'rayban_wayfarer_havane_marron');
-        if (sku){
-          JEELIZVTOWIDGET.load(sku);
+      function JEELIZVTOWIDGET.load_modelStandalone('glasses3D/10x246tort (1).json')
         }
       }
 
